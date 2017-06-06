@@ -1,0 +1,22 @@
+C:\Users\gekas\Desktop\LK-Heuristic-master\DPM_TSP\DPM_TSP\bin\Debug\DPM_TSP.exe.config
+C:\Users\gekas\Desktop\LK-Heuristic-master\DPM_TSP\DPM_TSP\obj\Debug\DPM_TSP.csprojResolveAssemblyReference.cache
+C:\Users\gekas\Desktop\LK-Heuristic-master\DPM_TSP\DPM_TSP\obj\Debug\DPM_TSP.Properties.Resources.resources
+C:\Users\gekas\Desktop\LK-Heuristic-master\DPM_TSP\DPM_TSP\obj\Debug\DPM_TSP.csproj.GenerateResource.Cache
+C:\Users\gekas\Desktop\LK-Heuristic-master\DPM_TSP\DPM_TSP\bin\Debug\DPM_TSP.exe
+C:\Users\gekas\Desktop\LK-Heuristic-master\DPM_TSP\DPM_TSP\bin\Debug\DPM_TSP.pdb
+C:\Users\gekas\Desktop\LK-Heuristic-master\DPM_TSP\DPM_TSP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gekas\Desktop\LK-Heuristic-master\DPM_TSP\DPM_TSP\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gekas\Desktop\LK-Heuristic-master\DPM_TSP\DPM_TSP\obj\Debug\DPM_TSP.exe
+C:\Users\gekas\Desktop\LK-Heuristic-master\DPM_TSP\DPM_TSP\obj\Debug\DPM_TSP.pdb
+C:\Users\gekas\Desktop\LK-Heuristic-master\DPM_TSP\DPM_TSP\obj\Debug\DPM_TSP.MainForm.resources
+C:\Users\gekas\Google Диск\Диплом\TSP_DPM\DPM_TSP\bin\Debug\DPM_TSP.exe.config
+C:\Users\gekas\Google Диск\Диплом\TSP_DPM\DPM_TSP\obj\Debug\DPM_TSP.exe
+C:\Users\gekas\Google Диск\Диплом\TSP_DPM\DPM_TSP\obj\Debug\DPM_TSP.pdb
+C:\Users\gekas\Google Диск\Диплом\TSP_DPM\DPM_TSP\obj\Debug\DPM_TSP.csprojResolveAssemblyReference.cache
+C:\Users\gekas\Google Диск\Диплом\TSP_DPM\DPM_TSP\obj\Debug\DPM_TSP.MainForm.resources
+C:\Users\gekas\Google Диск\Диплом\TSP_DPM\DPM_TSP\obj\Debug\DPM_TSP.Properties.Resources.resources
+C:\Users\gekas\Google Диск\Диплом\TSP_DPM\DPM_TSP\obj\Debug\DPM_TSP.csproj.GenerateResource.Cache
+C:\Users\gekas\Google Диск\Диплом\TSP_DPM\DPM_TSP\bin\Debug\DPM_TSP.exe
+C:\Users\gekas\Google Диск\Диплом\TSP_DPM\DPM_TSP\bin\Debug\DPM_TSP.pdb
+C:\Users\gekas\Google Диск\Диплом\TSP_DPM\DPM_TSP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gekas\Google Диск\Диплом\TSP_DPM\DPM_TSP\bin\Debug\Newtonsoft.Json.xml
