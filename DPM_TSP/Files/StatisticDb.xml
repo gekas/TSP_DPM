@@ -45,4 +45,301 @@
     <TimeElapsed>46.7626</TimeElapsed>
     <Loss>9.82</Loss>
   </MeasurementItem>
+  <MeasurementItem HashCode="-900315572">
+    <Method>2-Opt</Method>
+    <TSPProblem>eil51</TSPProblem>
+    <Size>51</Size>
+    <BestKnownSolution>426</BestKnownSolution>
+    <Distance>474</Distance>
+    <TimeElapsed>9.5673000000000012</TimeElapsed>
+    <Loss>11.27</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="575748847">
+    <Method>2.5-Opt</Method>
+    <TSPProblem>eil51</TSPProblem>
+    <Size>51</Size>
+    <BestKnownSolution>426</BestKnownSolution>
+    <Distance>469</Distance>
+    <TimeElapsed>13.8598</TimeElapsed>
+    <Loss>10.09</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="379994498">
+    <Method>Or-Opt</Method>
+    <TSPProblem>eil51</TSPProblem>
+    <Size>51</Size>
+    <BestKnownSolution>426</BestKnownSolution>
+    <Distance>476</Distance>
+    <TimeElapsed>60.987300000000005</TimeElapsed>
+    <Loss>11.74</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="1611214519">
+    <Method>3-Opt</Method>
+    <TSPProblem>eil51</TSPProblem>
+    <Size>51</Size>
+    <BestKnownSolution>426</BestKnownSolution>
+    <Distance>462</Distance>
+    <TimeElapsed>207.4162</TimeElapsed>
+    <Loss>8.45</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="1365461054">
+    <Method>2-Opt</Method>
+    <TSPProblem>pr76</TSPProblem>
+    <Size>76</Size>
+    <BestKnownSolution>108159</BestKnownSolution>
+    <Distance>110750</Distance>
+    <TimeElapsed>48.219</TimeElapsed>
+    <Loss>2.40</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-654192739">
+    <Method>2.5-Opt</Method>
+    <TSPProblem>pr76</TSPProblem>
+    <Size>76</Size>
+    <BestKnownSolution>108159</BestKnownSolution>
+    <Distance>109587</Distance>
+    <TimeElapsed>50.0865</TimeElapsed>
+    <Loss>1.32</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-124753797">
+    <Method>3-Opt</Method>
+    <TSPProblem>pr76</TSPProblem>
+    <Size>76</Size>
+    <BestKnownSolution>108159</BestKnownSolution>
+    <Distance>109076</Distance>
+    <TimeElapsed>1281.1028000000001</TimeElapsed>
+    <Loss>0.85</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="136481784">
+    <Method>Or-Opt</Method>
+    <TSPProblem>pr76</TSPProblem>
+    <Size>76</Size>
+    <BestKnownSolution>108159</BestKnownSolution>
+    <Distance>119210</Distance>
+    <TimeElapsed>199.0755</TimeElapsed>
+    <Loss>10.22</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="644837370">
+    <Method>2-Opt</Method>
+    <TSPProblem>ch130</TSPProblem>
+    <Size>130</Size>
+    <BestKnownSolution>6110</BestKnownSolution>
+    <Distance>6710</Distance>
+    <TimeElapsed>57.136100000000006</TimeElapsed>
+    <Loss>9.82</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="1309440932">
+    <Method>2.5-Opt</Method>
+    <TSPProblem>ch130</TSPProblem>
+    <Size>130</Size>
+    <BestKnownSolution>6110</BestKnownSolution>
+    <Distance>6653</Distance>
+    <TimeElapsed>218.7554</TimeElapsed>
+    <Loss>8.89</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-1686027861">
+    <Method>3-Opt</Method>
+    <TSPProblem>ch130</TSPProblem>
+    <Size>130</Size>
+    <BestKnownSolution>6110</BestKnownSolution>
+    <Distance>6291</Distance>
+    <TimeElapsed>8977.4426</TimeElapsed>
+    <Loss>2.96</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-1819365847">
+    <Method>Or-Opt</Method>
+    <TSPProblem>ch130</TSPProblem>
+    <Size>130</Size>
+    <BestKnownSolution>6110</BestKnownSolution>
+    <Distance>6858</Distance>
+    <TimeElapsed>783.263</TimeElapsed>
+    <Loss>12.24</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-981025406">
+    <Method>2-Opt</Method>
+    <TSPProblem>a280</TSPProblem>
+    <Size>280</Size>
+    <BestKnownSolution>2579</BestKnownSolution>
+    <Distance>2821</Distance>
+    <TimeElapsed>367.5211</TimeElapsed>
+    <Loss>9.38</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-240208744">
+    <Method>2.5-Opt</Method>
+    <TSPProblem>a280</TSPProblem>
+    <Size>280</Size>
+    <BestKnownSolution>2579</BestKnownSolution>
+    <Distance>2805</Distance>
+    <TimeElapsed>1407.3666</TimeElapsed>
+    <Loss>8.76</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="265531270">
+    <Method>3-Opt</Method>
+    <TSPProblem>a280</TSPProblem>
+    <Size>280</Size>
+    <BestKnownSolution>2579</BestKnownSolution>
+    <Distance>2757</Distance>
+    <TimeElapsed>77166.6659</TimeElapsed>
+    <Loss>6.90</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="1328057610">
+    <Method>Or-Opt</Method>
+    <TSPProblem>a280</TSPProblem>
+    <Size>280</Size>
+    <BestKnownSolution>2579</BestKnownSolution>
+    <Distance>2841</Distance>
+    <TimeElapsed>5257.1419000000005</TimeElapsed>
+    <Loss>10.16</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-1254408120">
+    <Method>2-Opt</Method>
+    <TSPProblem>bier127</TSPProblem>
+    <Size>127</Size>
+    <BestKnownSolution>118282</BestKnownSolution>
+    <Distance>122173</Distance>
+    <TimeElapsed>51.0492</TimeElapsed>
+    <Loss>3.29</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="701439715">
+    <Method>2.5-Opt</Method>
+    <TSPProblem>bier127</TSPProblem>
+    <Size>127</Size>
+    <BestKnownSolution>118282</BestKnownSolution>
+    <Distance>122813</Distance>
+    <TimeElapsed>91.9711</TimeElapsed>
+    <Loss>3.83</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-840544618">
+    <Method>3-Opt</Method>
+    <TSPProblem>bier127</TSPProblem>
+    <Size>127</Size>
+    <BestKnownSolution>118282</BestKnownSolution>
+    <Distance>119033</Distance>
+    <TimeElapsed>6971.5286000000006</TimeElapsed>
+    <Loss>0.63</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-340670712">
+    <Method>Or-Opt</Method>
+    <TSPProblem>bier127</TSPProblem>
+    <Size>127</Size>
+    <BestKnownSolution>118282</BestKnownSolution>
+    <Distance>121186</Distance>
+    <TimeElapsed>813.99110000000007</TimeElapsed>
+    <Loss>2.46</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-1150249187">
+    <Method>2-Opt</Method>
+    <TSPProblem>lin105</TSPProblem>
+    <Size>105</Size>
+    <BestKnownSolution>14379</BestKnownSolution>
+    <Distance>15637</Distance>
+    <TimeElapsed>89.76</TimeElapsed>
+    <Loss>8.75</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="718944592">
+    <Method>2.5-Opt</Method>
+    <TSPProblem>lin105</TSPProblem>
+    <Size>105</Size>
+    <BestKnownSolution>14379</BestKnownSolution>
+    <Distance>14709</Distance>
+    <TimeElapsed>209.7784</TimeElapsed>
+    <Loss>2.30</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="2002710189">
+    <Method>3-Opt</Method>
+    <TSPProblem>lin105</TSPProblem>
+    <Size>105</Size>
+    <BestKnownSolution>14379</BestKnownSolution>
+    <Distance>14418</Distance>
+    <TimeElapsed>2857.6217</TimeElapsed>
+    <Loss>0.27</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-1604445192">
+    <Method>Or-Opt</Method>
+    <TSPProblem>lin105</TSPProblem>
+    <Size>105</Size>
+    <BestKnownSolution>14379</BestKnownSolution>
+    <Distance>16617</Distance>
+    <TimeElapsed>764.9239</TimeElapsed>
+    <Loss>15.56</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="1405959782">
+    <Method>2-Opt</Method>
+    <TSPProblem>pr144</TSPProblem>
+    <Size>144</Size>
+    <BestKnownSolution>58537</BestKnownSolution>
+    <Distance>61266</Distance>
+    <TimeElapsed>27.0452</TimeElapsed>
+    <Loss>4.66</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-1402040029">
+    <Method>2.5-Opt</Method>
+    <TSPProblem>pr144</TSPProblem>
+    <Size>144</Size>
+    <BestKnownSolution>58537</BestKnownSolution>
+    <Distance>61014</Distance>
+    <TimeElapsed>96.8194</TimeElapsed>
+    <Loss>4.23</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="1007755027">
+    <Method>3-Opt</Method>
+    <TSPProblem>pr144</TSPProblem>
+    <Size>144</Size>
+    <BestKnownSolution>58537</BestKnownSolution>
+    <Distance>58784</Distance>
+    <TimeElapsed>9287.0522</TimeElapsed>
+    <Loss>0.42</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="331761164">
+    <Method>Or-Opt</Method>
+    <TSPProblem>pr144</TSPProblem>
+    <Size>144</Size>
+    <BestKnownSolution>58537</BestKnownSolution>
+    <Distance>59391</Distance>
+    <TimeElapsed>501.3518</TimeElapsed>
+    <Loss>1.46</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="2126259264">
+    <Method>2-Opt</Method>
+    <TSPProblem>ts225</TSPProblem>
+    <Size>225</Size>
+    <BestKnownSolution>126643</BestKnownSolution>
+    <Distance>134983</Distance>
+    <TimeElapsed>200.4541</TimeElapsed>
+    <Loss>6.59</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="-650156495">
+    <Method>2.5-Opt</Method>
+    <TSPProblem>ts225</TSPProblem>
+    <Size>225</Size>
+    <BestKnownSolution>126643</BestKnownSolution>
+    <Distance>134896</Distance>
+    <TimeElapsed>567.8328</TimeElapsed>
+    <Loss>6.52</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="214503052">
+    <Method>3-Opt</Method>
+    <TSPProblem>ts225</TSPProblem>
+    <Size>225</Size>
+    <BestKnownSolution>126643</BestKnownSolution>
+    <Distance>128582</Distance>
+    <TimeElapsed>48606.2546</TimeElapsed>
+    <Loss>1.53</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="880683737">
+    <Method>Or-Opt</Method>
+    <TSPProblem>ts225</TSPProblem>
+    <Size>225</Size>
+    <BestKnownSolution>126643</BestKnownSolution>
+    <Distance>145487</Distance>
+    <TimeElapsed>1685.7202</TimeElapsed>
+    <Loss>14.88</Loss>
+  </MeasurementItem>
 </ArrayOfMeasurementItem>
+<!-- <MeasurementItem HashCode="128732703"> -->
+<!-- <Method>Or-Opt</Method> -->
+<!-- <TSPProblem>fl1400</TSPProblem> -->
+<!-- <Size>1400</Size> -->
+<!-- <BestKnownSolution>20127</BestKnownSolution> -->
+<!-- <Distance>25199</Distance> -->
+<!-- <TimeElapsed>1404836.9511000002</TimeElapsed> -->
+<!-- <Loss>25.20</Loss> -->
+<!-- </MeasurementItem> -->

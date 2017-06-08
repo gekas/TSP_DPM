@@ -28,18 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.crtNN = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.crtResult = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tcMCharts = new System.Windows.Forms.TabControl();
             this.tpTwoOpt = new System.Windows.Forms.TabPage();
             this.tpTwoHalfOpt = new System.Windows.Forms.TabPage();
             this.tpThreeOpt = new System.Windows.Forms.TabPage();
             this.tpOrOpt = new System.Windows.Forms.TabPage();
-            this.crtResult = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.crtNN = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dgvResults = new System.Windows.Forms.DataGridView();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSaveStat = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvCommonResults = new System.Windows.Forms.DataGridView();
+            this.cAlgoName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.сMCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cAvg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cError = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rtbExecutionSteps = new System.Windows.Forms.RichTextBox();
+            this.cbxLogging = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbProblemSize = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,51 +78,45 @@
             this.cbxThreeOpt = new System.Windows.Forms.CheckBox();
             this.cbxTwoHalfOpt = new System.Windows.Forms.CheckBox();
             this.cbxTwoOpt = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.dgvCommonResults = new System.Windows.Forms.DataGridView();
-            this.cAlgoName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.сMCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cAvg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cError = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvResults = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbxLogging = new System.Windows.Forms.CheckBox();
-            this.rtbExecutionSteps = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSaveStat = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.crtNN)).BeginInit();
-            this.tcMCharts.SuspendLayout();
+            this.tbSpeedStat = new System.Windows.Forms.TabPage();
+            this.chartAlgosSpeed = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tbAlgos = new System.Windows.Forms.TabPage();
+            this.tcMainMenu = new System.Windows.Forms.TabControl();
+            this.tbQualityStat = new System.Windows.Forms.TabPage();
+            this.chartAlgosQuality = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.crtResult)).BeginInit();
+            this.tcMCharts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.crtNN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommonResults)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudRepeats)).BeginInit();
             this.gbMethods.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCommonResults)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tbSpeedStat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartAlgosSpeed)).BeginInit();
+            this.tbAlgos.SuspendLayout();
+            this.tcMainMenu.SuspendLayout();
+            this.tbQualityStat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartAlgosQuality)).BeginInit();
             this.SuspendLayout();
             // 
-            // crtNN
+            // crtResult
             // 
-            this.crtNN.BackColor = System.Drawing.Color.Silver;
-            this.crtNN.BorderlineColor = System.Drawing.Color.Gray;
-            this.crtNN.BorderSkin.BorderColor = System.Drawing.Color.Gray;
-            chartArea3.Name = "ChartArea1";
-            this.crtNN.ChartAreas.Add(chartArea3);
-            this.crtNN.Location = new System.Drawing.Point(278, 34);
-            this.crtNN.Name = "crtNN";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.EmptyPointStyle.BorderWidth = 5;
-            series3.Name = "NN";
-            this.crtNN.Series.Add(series3);
-            this.crtNN.Size = new System.Drawing.Size(767, 676);
-            this.crtNN.TabIndex = 0;
-            this.crtNN.Text = "crtNN";
+            this.crtResult.BackColor = System.Drawing.Color.Silver;
+            chartArea1.Name = "ChartArea1";
+            this.crtResult.ChartAreas.Add(chartArea1);
+            this.crtResult.Location = new System.Drawing.Point(1042, 30);
+            this.crtResult.Name = "crtResult";
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.crtResult.Series.Add(series1);
+            this.crtResult.Size = new System.Drawing.Size(856, 676);
+            this.crtResult.TabIndex = 5;
+            this.crtResult.Text = "crtSolution";
             // 
             // tcMCharts
             // 
@@ -111,7 +125,7 @@
             this.tcMCharts.Controls.Add(this.tpThreeOpt);
             this.tcMCharts.Controls.Add(this.tpOrOpt);
             this.tcMCharts.Enabled = false;
-            this.tcMCharts.Location = new System.Drawing.Point(1047, 12);
+            this.tcMCharts.Location = new System.Drawing.Point(1038, 5);
             this.tcMCharts.Name = "tcMCharts";
             this.tcMCharts.SelectedIndex = 0;
             this.tcMCharts.Size = new System.Drawing.Size(864, 24);
@@ -156,23 +170,160 @@
             this.tpOrOpt.Text = "Or-Opt";
             this.tpOrOpt.UseVisualStyleBackColor = true;
             // 
-            // crtResult
-            // 
-            this.crtResult.BackColor = System.Drawing.Color.Silver;
-            chartArea4.Name = "ChartArea1";
-            this.crtResult.ChartAreas.Add(chartArea4);
-            this.crtResult.Location = new System.Drawing.Point(1051, 34);
-            this.crtResult.Name = "crtResult";
-            series4.ChartArea = "ChartArea1";
-            series4.Name = "Series1";
-            this.crtResult.Series.Add(series4);
-            this.crtResult.Size = new System.Drawing.Size(856, 676);
-            this.crtResult.TabIndex = 5;
-            this.crtResult.Text = "crtSolution";
-            // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog";
+            // 
+            // crtNN
+            // 
+            this.crtNN.BackColor = System.Drawing.Color.Silver;
+            this.crtNN.BorderlineColor = System.Drawing.Color.Gray;
+            this.crtNN.BorderSkin.BorderColor = System.Drawing.Color.Gray;
+            chartArea2.Name = "ChartArea1";
+            this.crtNN.ChartAreas.Add(chartArea2);
+            this.crtNN.Location = new System.Drawing.Point(269, 30);
+            this.crtNN.Name = "crtNN";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.EmptyPointStyle.BorderWidth = 5;
+            series2.Name = "NN";
+            this.crtNN.Series.Add(series2);
+            this.crtNN.Size = new System.Drawing.Size(767, 676);
+            this.crtNN.TabIndex = 0;
+            this.crtNN.Text = "crtNN";
+            // 
+            // dgvResults
+            // 
+            this.dgvResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvResults.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResults.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvResults.Location = new System.Drawing.Point(479, 62);
+            this.dgvResults.Name = "dgvResults";
+            this.dgvResults.ReadOnly = true;
+            this.dgvResults.RowHeadersVisible = false;
+            this.dgvResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvResults.Size = new System.Drawing.Size(639, 175);
+            this.dgvResults.TabIndex = 20;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(12, 27);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 22;
+            this.btnClear.Text = "Відчистити";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnSaveStat
+            // 
+            this.btnSaveStat.Location = new System.Drawing.Point(93, 27);
+            this.btnSaveStat.Name = "btnSaveStat";
+            this.btnSaveStat.Size = new System.Drawing.Size(137, 23);
+            this.btnSaveStat.TabIndex = 23;
+            this.btnSaveStat.Text = "Зберегти статистику";
+            this.btnSaveStat.UseVisualStyleBackColor = true;
+            this.btnSaveStat.Click += new System.EventHandler(this.btnSaveStat_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnSaveStat);
+            this.groupBox1.Controls.Add(this.btnClear);
+            this.groupBox1.Controls.Add(this.dgvCommonResults);
+            this.groupBox1.Controls.Add(this.dgvResults);
+            this.groupBox1.Location = new System.Drawing.Point(3, 718);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1131, 249);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Результати";
+            // 
+            // dgvCommonResults
+            // 
+            this.dgvCommonResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCommonResults.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvCommonResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCommonResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cAlgoName,
+            this.сMCount,
+            this.cMin,
+            this.cAvg,
+            this.cMax,
+            this.cError});
+            this.dgvCommonResults.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvCommonResults.Location = new System.Drawing.Point(12, 62);
+            this.dgvCommonResults.Name = "dgvCommonResults";
+            this.dgvCommonResults.ReadOnly = true;
+            this.dgvCommonResults.RowHeadersVisible = false;
+            this.dgvCommonResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCommonResults.Size = new System.Drawing.Size(446, 175);
+            this.dgvCommonResults.TabIndex = 21;
+            // 
+            // cAlgoName
+            // 
+            this.cAlgoName.HeaderText = "Алгоритм";
+            this.cAlgoName.Name = "cAlgoName";
+            this.cAlgoName.ReadOnly = true;
+            // 
+            // сMCount
+            // 
+            this.сMCount.HeaderText = "Кількість замірів";
+            this.сMCount.Name = "сMCount";
+            this.сMCount.ReadOnly = true;
+            // 
+            // cMin
+            // 
+            this.cMin.HeaderText = "Мінімум (мс)";
+            this.cMin.Name = "cMin";
+            this.cMin.ReadOnly = true;
+            // 
+            // cAvg
+            // 
+            this.cAvg.HeaderText = "Середнє (мс)";
+            this.cAvg.Name = "cAvg";
+            this.cAvg.ReadOnly = true;
+            // 
+            // cMax
+            // 
+            this.cMax.HeaderText = "Максимум (мс)";
+            this.cMax.Name = "cMax";
+            this.cMax.ReadOnly = true;
+            // 
+            // cError
+            // 
+            this.cError.HeaderText = "Похибка (%)";
+            this.cError.Name = "cError";
+            this.cError.ReadOnly = true;
+            // 
+            // rtbExecutionSteps
+            // 
+            this.rtbExecutionSteps.Location = new System.Drawing.Point(14, 62);
+            this.rtbExecutionSteps.Name = "rtbExecutionSteps";
+            this.rtbExecutionSteps.Size = new System.Drawing.Size(719, 175);
+            this.rtbExecutionSteps.TabIndex = 21;
+            this.rtbExecutionSteps.Text = "";
+            // 
+            // cbxLogging
+            // 
+            this.cbxLogging.AutoSize = true;
+            this.cbxLogging.Location = new System.Drawing.Point(14, 31);
+            this.cbxLogging.Name = "cbxLogging";
+            this.cbxLogging.Size = new System.Drawing.Size(73, 17);
+            this.cbxLogging.TabIndex = 22;
+            this.cbxLogging.Text = "Логувати";
+            this.cbxLogging.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cbxLogging);
+            this.groupBox2.Controls.Add(this.rtbExecutionSteps);
+            this.groupBox2.Location = new System.Drawing.Point(1153, 718);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(745, 249);
+            this.groupBox2.TabIndex = 23;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Логування";
             // 
             // panel1
             // 
@@ -362,192 +513,159 @@
             this.cbxTwoOpt.Text = "2-Opt";
             this.cbxTwoOpt.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnSaveStat);
-            this.groupBox1.Controls.Add(this.btnClear);
-            this.groupBox1.Controls.Add(this.dgvCommonResults);
-            this.groupBox1.Controls.Add(this.dgvResults);
-            this.groupBox1.Location = new System.Drawing.Point(12, 719);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1131, 276);
-            this.groupBox1.TabIndex = 22;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Результати";
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(13, 31);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 22;
-            this.btnClear.Text = "Відчистити";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // dgvCommonResults
-            // 
-            this.dgvCommonResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCommonResults.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvCommonResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCommonResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cAlgoName,
-            this.сMCount,
-            this.cMin,
-            this.cAvg,
-            this.cMax,
-            this.cError});
-            this.dgvCommonResults.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvCommonResults.Location = new System.Drawing.Point(13, 62);
-            this.dgvCommonResults.Name = "dgvCommonResults";
-            this.dgvCommonResults.ReadOnly = true;
-            this.dgvCommonResults.RowHeadersVisible = false;
-            this.dgvCommonResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCommonResults.Size = new System.Drawing.Size(446, 202);
-            this.dgvCommonResults.TabIndex = 21;
-            // 
-            // cAlgoName
-            // 
-            this.cAlgoName.HeaderText = "Алгоритм";
-            this.cAlgoName.Name = "cAlgoName";
-            this.cAlgoName.ReadOnly = true;
-            // 
-            // сMCount
-            // 
-            this.сMCount.HeaderText = "Кількість замірів";
-            this.сMCount.Name = "сMCount";
-            this.сMCount.ReadOnly = true;
-            // 
-            // cMin
-            // 
-            this.cMin.HeaderText = "Мінімум (мс)";
-            this.cMin.Name = "cMin";
-            this.cMin.ReadOnly = true;
-            // 
-            // cAvg
-            // 
-            this.cAvg.HeaderText = "Середнє (мс)";
-            this.cAvg.Name = "cAvg";
-            this.cAvg.ReadOnly = true;
-            // 
-            // cMax
-            // 
-            this.cMax.HeaderText = "Максимум (мс)";
-            this.cMax.Name = "cMax";
-            this.cMax.ReadOnly = true;
-            // 
-            // cError
-            // 
-            this.cError.HeaderText = "Похибка (%)";
-            this.cError.Name = "cError";
-            this.cError.ReadOnly = true;
-            // 
-            // dgvResults
-            // 
-            this.dgvResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvResults.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResults.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvResults.Location = new System.Drawing.Point(480, 62);
-            this.dgvResults.Name = "dgvResults";
-            this.dgvResults.ReadOnly = true;
-            this.dgvResults.RowHeadersVisible = false;
-            this.dgvResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResults.Size = new System.Drawing.Size(639, 202);
-            this.dgvResults.TabIndex = 20;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.cbxLogging);
-            this.groupBox2.Controls.Add(this.rtbExecutionSteps);
-            this.groupBox2.Location = new System.Drawing.Point(1162, 719);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(745, 276);
-            this.groupBox2.TabIndex = 23;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Логування";
-            // 
-            // cbxLogging
-            // 
-            this.cbxLogging.AutoSize = true;
-            this.cbxLogging.Location = new System.Drawing.Point(14, 31);
-            this.cbxLogging.Name = "cbxLogging";
-            this.cbxLogging.Size = new System.Drawing.Size(73, 17);
-            this.cbxLogging.TabIndex = 22;
-            this.cbxLogging.Text = "Логувати";
-            this.cbxLogging.UseVisualStyleBackColor = true;
-            // 
-            // rtbExecutionSteps
-            // 
-            this.rtbExecutionSteps.Location = new System.Drawing.Point(14, 62);
-            this.rtbExecutionSteps.Name = "rtbExecutionSteps";
-            this.rtbExecutionSteps.Size = new System.Drawing.Size(719, 202);
-            this.rtbExecutionSteps.TabIndex = 21;
-            this.rtbExecutionSteps.Text = "";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.panel1);
-            this.groupBox3.Location = new System.Drawing.Point(12, 34);
+            this.groupBox3.Location = new System.Drawing.Point(3, 6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(260, 369);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Навігація";
             // 
-            // btnSaveStat
+            // tbSpeedStat
             // 
-            this.btnSaveStat.Location = new System.Drawing.Point(94, 31);
-            this.btnSaveStat.Name = "btnSaveStat";
-            this.btnSaveStat.Size = new System.Drawing.Size(137, 23);
-            this.btnSaveStat.TabIndex = 23;
-            this.btnSaveStat.Text = "Зберегти статистику";
-            this.btnSaveStat.UseVisualStyleBackColor = true;
-            this.btnSaveStat.Click += new System.EventHandler(this.btnSaveStat_Click);
+            this.tbSpeedStat.Controls.Add(this.chartAlgosSpeed);
+            this.tbSpeedStat.Location = new System.Drawing.Point(4, 22);
+            this.tbSpeedStat.Name = "tbSpeedStat";
+            this.tbSpeedStat.Padding = new System.Windows.Forms.Padding(3);
+            this.tbSpeedStat.Size = new System.Drawing.Size(1912, 985);
+            this.tbSpeedStat.TabIndex = 1;
+            this.tbSpeedStat.Text = "Показники швидкості";
+            this.tbSpeedStat.UseVisualStyleBackColor = true;
+            // 
+            // chartAlgosSpeed
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chartAlgosSpeed.ChartAreas.Add(chartArea3);
+            this.chartAlgosSpeed.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chartAlgosSpeed.Legends.Add(legend1);
+            this.chartAlgosSpeed.Location = new System.Drawing.Point(3, 3);
+            this.chartAlgosSpeed.Name = "chartAlgosSpeed";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Legend = "Legend1";
+            series3.Name = "sAlgosSpeed";
+            this.chartAlgosSpeed.Series.Add(series3);
+            this.chartAlgosSpeed.Size = new System.Drawing.Size(1906, 979);
+            this.chartAlgosSpeed.TabIndex = 0;
+            this.chartAlgosSpeed.Text = "chart1";
+            // 
+            // tbAlgos
+            // 
+            this.tbAlgos.Controls.Add(this.groupBox3);
+            this.tbAlgos.Controls.Add(this.crtNN);
+            this.tbAlgos.Controls.Add(this.groupBox2);
+            this.tbAlgos.Controls.Add(this.tcMCharts);
+            this.tbAlgos.Controls.Add(this.groupBox1);
+            this.tbAlgos.Controls.Add(this.crtResult);
+            this.tbAlgos.Location = new System.Drawing.Point(4, 22);
+            this.tbAlgos.Name = "tbAlgos";
+            this.tbAlgos.Padding = new System.Windows.Forms.Padding(3);
+            this.tbAlgos.Size = new System.Drawing.Size(1912, 985);
+            this.tbAlgos.TabIndex = 0;
+            this.tbAlgos.Text = "Алгоритми";
+            this.tbAlgos.UseVisualStyleBackColor = true;
+            // 
+            // tcMainMenu
+            // 
+            this.tcMainMenu.Controls.Add(this.tbAlgos);
+            this.tcMainMenu.Controls.Add(this.tbSpeedStat);
+            this.tcMainMenu.Controls.Add(this.tbQualityStat);
+            this.tcMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.tcMainMenu.Name = "tcMainMenu";
+            this.tcMainMenu.SelectedIndex = 0;
+            this.tcMainMenu.Size = new System.Drawing.Size(1920, 1011);
+            this.tcMainMenu.TabIndex = 25;
+            this.tcMainMenu.SelectedIndexChanged += new System.EventHandler(this.tcMainMenu_SelectedIndexChanged);
+            // 
+            // tbQualityStat
+            // 
+            this.tbQualityStat.Controls.Add(this.chartAlgosQuality);
+            this.tbQualityStat.Location = new System.Drawing.Point(4, 22);
+            this.tbQualityStat.Name = "tbQualityStat";
+            this.tbQualityStat.Size = new System.Drawing.Size(1912, 985);
+            this.tbQualityStat.TabIndex = 2;
+            this.tbQualityStat.Text = "Показники якості";
+            this.tbQualityStat.UseVisualStyleBackColor = true;
+            // 
+            // chartAlgosQuality
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chartAlgosQuality.ChartAreas.Add(chartArea4);
+            this.chartAlgosQuality.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Name = "Legend1";
+            this.chartAlgosQuality.Legends.Add(legend2);
+            this.chartAlgosQuality.Location = new System.Drawing.Point(0, 0);
+            this.chartAlgosQuality.Name = "chartAlgosQuality";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartAlgosQuality.Series.Add(series4);
+            this.chartAlgosQuality.Size = new System.Drawing.Size(1912, 985);
+            this.chartAlgosQuality.TabIndex = 0;
+            this.chartAlgosQuality.Text = "chart1";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1011);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.crtResult);
-            this.Controls.Add(this.tcMCharts);
-            this.Controls.Add(this.crtNN);
+            this.Controls.Add(this.tcMainMenu);
             this.Name = "MainForm";
             this.Text = "STSP - solver";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.crtNN)).EndInit();
-            this.tcMCharts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.crtResult)).EndInit();
+            this.tcMCharts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.crtNN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommonResults)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudRepeats)).EndInit();
             this.gbMethods.ResumeLayout(false);
             this.gbMethods.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCommonResults)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.tbSpeedStat.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartAlgosSpeed)).EndInit();
+            this.tbAlgos.ResumeLayout(false);
+            this.tcMainMenu.ResumeLayout(false);
+            this.tbQualityStat.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartAlgosQuality)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart crtNN;
+        private System.Windows.Forms.DataVisualization.Charting.Chart crtResult;
         private System.Windows.Forms.TabControl tcMCharts;
         private System.Windows.Forms.TabPage tpTwoOpt;
         private System.Windows.Forms.TabPage tpTwoHalfOpt;
         private System.Windows.Forms.TabPage tpThreeOpt;
         private System.Windows.Forms.TabPage tpOrOpt;
-        private System.Windows.Forms.DataVisualization.Charting.Chart crtResult;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.DataVisualization.Charting.Chart crtNN;
+        private System.Windows.Forms.DataGridView dgvResults;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSaveStat;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgvCommonResults;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cAlgoName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn сMCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cMin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cAvg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cMax;
+        private System.Windows.Forms.RichTextBox rtbExecutionSteps;
+        private System.Windows.Forms.CheckBox cbxLogging;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cError;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox tbProblemSize;
         private System.Windows.Forms.Label label5;
@@ -566,21 +684,13 @@
         private System.Windows.Forms.CheckBox cbxThreeOpt;
         private System.Windows.Forms.CheckBox cbxTwoHalfOpt;
         private System.Windows.Forms.CheckBox cbxTwoOpt;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.DataGridView dgvCommonResults;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cAlgoName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn сMCount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cMin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cAvg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cMax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cError;
-        private System.Windows.Forms.DataGridView dgvResults;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox rtbExecutionSteps;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox cbxLogging;
-        private System.Windows.Forms.Button btnSaveStat;
+        private System.Windows.Forms.TabPage tbSpeedStat;
+        private System.Windows.Forms.TabPage tbAlgos;
+        private System.Windows.Forms.TabControl tcMainMenu;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartAlgosSpeed;
+        private System.Windows.Forms.TabPage tbQualityStat;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartAlgosQuality;
     }
 }
 

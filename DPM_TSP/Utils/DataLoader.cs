@@ -63,6 +63,7 @@ namespace DPM_TSP.Utils
             }
 
             var result = DeserializeParams<MeasurementItem>(originalDoc);
+            result.Sort(new MeasurementItemBySizeComparer());
             return result;
         }
 

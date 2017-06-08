@@ -37,6 +37,9 @@ namespace DPM_TSP.Algos
                            // ExecutionProcess.AddStep($"Calculate gain for {X1.Name} - {X2.Name}, {Y1.Name} - {Y2.Name}, {Z1.Name} - {Z2.Name}. Gain = {gain}", ExecutionProcess.StepType.CalculateGain);
                             if (gain > 0)
                             {
+                                int segmentSize = (j - i + N) % N;
+                                if (tour.Path.Count < i +1+ segmentSize) break; 
+
                                 MakeSegmentShiftMove(tour, i, j, k);
                                 ExecutionProcess.AddStep($"Segment Shift for {X1.Name} - {X2.Name}, {Y1.Name} - {Y2.Name}, {Z1.Name} - {Z2.Name}. Gain = {gain}", Color.Green, ExecutionProcess.StepType.Move);
 
@@ -67,6 +70,10 @@ namespace DPM_TSP.Algos
             SegmentShift(tour, i, j, k);
         }
 
+        // Shifts the segment of tour:
+        // cities from t[i+1] to t[j] from their current position to position
+        // after current city t[k], that is between cities t[k] and t[k+1].
+        // Assumes:  k, k+1 are not within the segment [i+1..j]
         private void SegmentShift(Tour tour, int i, int j, int k)
         {
             int N = tour.Size;

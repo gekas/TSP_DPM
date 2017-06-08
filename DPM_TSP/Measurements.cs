@@ -31,7 +31,7 @@ namespace DPM_TSP
         public double TimeElapsed { get; set; }
 
         [DisplayName("Похибка (%)")]
-        public string Loss { get; set; }
+        public double Loss { get; set; }
 
         [Browsable(false)]
         [XmlAttribute]
@@ -50,7 +50,7 @@ namespace DPM_TSP
             Size = tour.Size;
             BestKnownSolution = tour.BestKnownSolution;
             Distance = tour.GetCost();
-            Loss = ((tour.GetCost() / BestKnownSolution) * (double)100 - 100).ToString("0.00");
+            Loss = (tour.GetCost() / BestKnownSolution) * (double)100 - 100;
             HashCode = GetHashCode();
         }
 
@@ -63,6 +63,14 @@ namespace DPM_TSP
         public object Clone()
         {
             return new MeasurementItem() { Method = this.Method, ResultTour = (Tour)this.ResultTour.Clone(), TimeElapsed = this.TimeElapsed };
+        }
+    }
+
+    public class MeasurementItemBySizeComparer : IComparer<MeasurementItem>
+    {
+        public int Compare(MeasurementItem x, MeasurementItem y)
+        {
+            return x.Size.CompareTo(y.Size);
         }
     }
 }

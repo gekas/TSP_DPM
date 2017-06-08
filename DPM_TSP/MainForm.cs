@@ -2,6 +2,7 @@
 using DPM_TSP.Extensions;
 using DPM_TSP.Utils;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
@@ -32,11 +33,15 @@ namespace DPM_TSP
         ThreeOpt threeOptSolver;
         OrOpt orOptSolver;
 
+        #region Algorithm results visualisation
+
         Series nnSerie;
         Series srTwoOpt;
         Series srTwoHalfOpt;
         Series srThreeOpt;
         Series srOrOpt;
+
+        #endregion
 
         public MainForm()
         {
@@ -63,8 +68,6 @@ namespace DPM_TSP
         private void Form1_Load(object sender, EventArgs e)
         {
             dgvResults.DataSource = mng.Items;
-
-            var r = DataLoader.LoadFromStatisticDb("../../Files/StatisticDb.xml");
         }
 
         private void DoOptimisation(Tour tour)
@@ -265,7 +268,87 @@ namespace DPM_TSP
 
         private void btnSaveStat_Click(object sender, EventArgs e)
         {
-            DataLoader.SaveMeasurementsInXml(mng.Items, "../../Files/StatisticDb.xml");
+            DataLoader.SaveMeasurementsInXml(mng.Items, Resources.StatisticDbFile);
+        }
+
+        private void tcMainMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tcMainMenu.SelectedTab == tbSpeedStat)
+            {
+                var statisticMeasurements = DataLoader.LoadFromStatisticDb(Resources.StatisticDbFile);
+                FillSpeedStatChart(statisticMeasurements);
+            }
+            else if (tcMainMenu.SelectedTab == tbQualityStat)
+            {
+                var statisticMeasurements = DataLoader.LoadFromStatisticDb(Resources.StatisticDbFile);
+                FillQualityStatChart(statisticMeasurements);
+            }
+        }
+
+        private void FillSpeedStatChart(List<MeasurementItem> measurements)
+        {
+            chartAlgosSpeed.Series.Clear();
+
+            var measurementGroups = measurements.GroupBy(m => m.Method).ToList();
+
+            foreach (var group in measurementGroups)
+            {
+                var currentMethodSeria = new Series(group.Key) { ChartType = SeriesChartType.Line, MarkerStyle = MarkerStyle.Circle, BorderWidth = 2 };
+
+                var measuresPerMethodGroup = measurements.Where(m => m.Method == group.Key).ToList();
+
+                foreach (var measure in measuresPerMethodGroup)
+                {
+                    currentMethodSeria.Points.Add(new DataPoint(measure.Size, measure.TimeElapsed) { ToolTip = measure.Size.ToString() });
+                }
+
+                chartAlgosSpeed.Series.Add(currentMethodSeria);
+            }
+
+            var measuresPerSizeGroup = measurements.GroupBy(m => m.Size).ToList();
+            for (int i = 0; i < measuresPerSizeGroup.Count; i++)
+            {
+                chartAlgosSpeed.ChartAreas[0].AxisX.CustomLabels.Add(new CustomLabel()
+                {
+                    FromPosition = measuresPerSizeGroup[i].Key - 50,
+                    ToPosition = measuresPerSizeGroup[i].Key + 50,
+                    Text = measuresPerSizeGroup[i].Key.ToString(),
+                    RowIndex = i % 2 == 0 ? 0 : 1
+                });
+            }
+        }
+
+        private void FillQualityStatChart(List<MeasurementItem> measurements)
+        {
+            chartAlgosQuality.Series.Clear();
+
+            var measurementGroups = measurements.GroupBy(m => m.Method).ToList();
+
+            foreach (var group in measurementGroups)
+            {
+                var currentMethodSeria = new Series(group.Key) { ChartType = SeriesChartType.Line, MarkerStyle = MarkerStyle.Circle, BorderWidth = 2 };
+
+                var measuresPerMethodGroup = measurements.Where(m => m.Method == group.Key).ToList();
+
+                foreach (var measure in measuresPerMethodGroup)
+                {
+                    currentMethodSeria.Points.Add(new DataPoint(measure.Size, 100 - measure.Loss) { ToolTip = measure.Loss.ToString() });
+                }
+
+                chartAlgosQuality.Series.Add(currentMethodSeria);
+            }
+
+            var measuresPerSizeGroup = measurements.GroupBy(m => m.Size).ToList();
+            for (int i = 0; i < measuresPerSizeGroup.Count; i++)
+            {
+                chartAlgosQuality.ChartAreas[0].AxisX.CustomLabels.Add(new CustomLabel()
+                {
+                    FromPosition = measuresPerSizeGroup[i].Key - 50,
+                    ToPosition = measuresPerSizeGroup[i].Key + 50,
+                    Text = measuresPerSizeGroup[i].Key.ToString(),
+                    RowIndex = i % 2 == 0 ? 0 : 1
+                });
+            }
         }
     }
 }
