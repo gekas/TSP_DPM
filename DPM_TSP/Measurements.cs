@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
 namespace DPM_TSP
@@ -34,6 +33,10 @@ namespace DPM_TSP
         [DisplayName("Похибка (%)")]
         public string Loss { get; set; }
 
+        [Browsable(false)]
+        [XmlAttribute]
+        public int HashCode { get; set; }
+
         [XmlIgnore]
         [Browsable(false)]
         public Tour ResultTour { get { return tour; } set { FillResults(value); } }
@@ -48,6 +51,13 @@ namespace DPM_TSP
             BestKnownSolution = tour.BestKnownSolution;
             Distance = tour.GetCost();
             Loss = ((tour.GetCost() / BestKnownSolution) * (double)100 - 100).ToString("0.00");
+            HashCode = GetHashCode();
+        }
+
+        public override int GetHashCode()
+        {
+            return Method.GetHashCode() + TSPProblem.GetHashCode() + Size + BestKnownSolution.GetHashCode()
+                    + Distance.GetHashCode() + TimeElapsed.GetHashCode() + Loss.GetHashCode();
         }
 
         public object Clone()

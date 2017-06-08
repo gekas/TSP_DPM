@@ -1,39 +1,48 @@
 <?xml version="1.0"?>
 <ArrayOfMeasurementItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <MeasurementItem>
+  <MeasurementItem HashCode="262483842">
     <Method>2-Opt</Method>
     <TSPProblem>eil51</TSPProblem>
     <Size>51</Size>
     <BestKnownSolution>426</BestKnownSolution>
     <Distance>474</Distance>
-    <TimeElapsed>12.3191</TimeElapsed>
-    <Loss>11,27</Loss>
+    <TimeElapsed>7.6349</TimeElapsed>
+    <Loss>11.27</Loss>
   </MeasurementItem>
-  <MeasurementItem>
+  <MeasurementItem HashCode="1738548261">
     <Method>2.5-Opt</Method>
     <TSPProblem>eil51</TSPProblem>
     <Size>51</Size>
     <BestKnownSolution>426</BestKnownSolution>
     <Distance>469</Distance>
-    <TimeElapsed>13.873800000000001</TimeElapsed>
-    <Loss>10,09</Loss>
+    <TimeElapsed>11.061900000000001</TimeElapsed>
+    <Loss>10.09</Loss>
   </MeasurementItem>
-  <MeasurementItem>
+  <MeasurementItem HashCode="1611083447">
     <Method>3-Opt</Method>
     <TSPProblem>eil51</TSPProblem>
     <Size>51</Size>
     <BestKnownSolution>426</BestKnownSolution>
     <Distance>462</Distance>
-    <TimeElapsed>215.96800000000002</TimeElapsed>
-    <Loss>8,45</Loss>
+    <TimeElapsed>161.8495</TimeElapsed>
+    <Loss>8.45</Loss>
   </MeasurementItem>
-  <MeasurementItem>
+  <MeasurementItem HashCode="1542793912">
     <Method>Or-Opt</Method>
     <TSPProblem>eil51</TSPProblem>
     <Size>51</Size>
     <BestKnownSolution>426</BestKnownSolution>
     <Distance>476</Distance>
-    <TimeElapsed>50.712500000000006</TimeElapsed>
-    <Loss>11,74</Loss>
+    <TimeElapsed>39.7102</TimeElapsed>
+    <Loss>11.74</Loss>
+  </MeasurementItem>
+  <MeasurementItem HashCode="644706298">
+    <Method>2-Opt</Method>
+    <TSPProblem>ch130</TSPProblem>
+    <Size>130</Size>
+    <BestKnownSolution>6110</BestKnownSolution>
+    <Distance>6710</Distance>
+    <TimeElapsed>46.7626</TimeElapsed>
+    <Loss>9.82</Loss>
   </MeasurementItem>
 </ArrayOfMeasurementItem>

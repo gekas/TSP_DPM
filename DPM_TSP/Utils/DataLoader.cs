@@ -29,14 +29,24 @@ namespace DPM_TSP.Utils
 
             XmlDocument originalDoc = new XmlDocument();
             using (XmlReader xr = new XmlTextReader(fileName))
-            { 
+            {
                 originalDoc.Load(xr);
             }
 
             foreach (XmlNode measurementNode in newXmlDoc.ChildNodes[1].ChildNodes)
             {
                 var nodeToAppend = originalDoc.ImportNode(measurementNode, true);
-                originalDoc.ChildNodes[1].AppendChild(nodeToAppend);
+
+                bool suchMeasurementAlreadyExist = false;
+                foreach (XmlNode node in originalDoc.ChildNodes[1])
+                    if (node.Attributes["HashCode"].Value == nodeToAppend.Attributes["HashCode"].Value)
+                    {
+                        suchMeasurementAlreadyExist = true;
+                        break;
+                    }
+
+                if (!suchMeasurementAlreadyExist)
+                    originalDoc.ChildNodes[1].AppendChild(nodeToAppend);
             }
 
             originalDoc.Save(fileName);
