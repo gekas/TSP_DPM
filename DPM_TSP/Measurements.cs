@@ -1,37 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace DPM_TSP
 {
-    class MeasurementManager
+    public class MeasurementManager
     {
         public List<MeasurementItem> Items { get; set; } = new List<MeasurementItem>();
     }
 
-    class MeasurementItem : ICloneable
+    [Serializable]
+    public class MeasurementItem : ICloneable
     {
         [DisplayName("Метод оптимізації")]
         public string Method { get; set; }
+
         [DisplayName("Проблема")]
-        public string TSPProblem { get { return ResultTour.TSPName; } }
+        public string TSPProblem { get; set; }
 
         [DisplayName("К-сть міст")]
-        public int Size { get { return ResultTour.Size; } }
+        public int Size { get; set; }
 
         [DisplayName("Відоме рішення")]
-        public double BestKnownSolution { get { return ResultTour.BestKnownSolution; } }
-        [Browsable(false)]
-        public Tour ResultTour { get; set; }
-        public double Distance { get { return ResultTour.GetCost(); } }
+        public double BestKnownSolution { get; set; }
+
+        public double Distance { get; set; }
+
         [DisplayName("Час (ms)")]
-        public int TimeElapsed { get; set; }
+        public double TimeElapsed { get; set; }
 
         [DisplayName("Похибка (%)")]
-        public string Loss { get {return ((ResultTour.GetCost() / BestKnownSolution) * (double)100 - 100).ToString("0.00"); } }
+        public string Loss { get; set; }
+
+        [XmlIgnore]
+        [Browsable(false)]
+        public Tour ResultTour { get { return tour; } set { FillResults(value); } }
+
+        private Tour tour;
+
+        private void FillResults(Tour newTour)
+        {
+            tour = newTour;
+            TSPProblem = tour.TSPName;
+            Size = tour.Size;
+            BestKnownSolution = tour.BestKnownSolution;
+            Distance = tour.GetCost();
+            Loss = ((tour.GetCost() / BestKnownSolution) * (double)100 - 100).ToString("0.00");
+        }
 
         public object Clone()
         {

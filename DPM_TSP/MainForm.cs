@@ -63,6 +63,8 @@ namespace DPM_TSP
         private void Form1_Load(object sender, EventArgs e)
         {
             dgvResults.DataSource = mng.Items;
+
+            var r = DataLoader.LoadFromStatisticDb("../../Files/StatisticDb.xml");
         }
 
         private void DoOptimisation(Tour tour)
@@ -132,13 +134,13 @@ namespace DPM_TSP
         private MeasurementItem GetMeasurement(OptimisationMethod method, Tour tourToOptimise, string displayMethodName)
         {
             Tour resultTour = null;
-            var executionTime = Task<int>.Factory.StartNew(() =>
+            var executionTime = Task<double>.Factory.StartNew(() =>
             {
                 Stopwatch sw = new Stopwatch();
                 sw.Start();
                 resultTour = method.DoOptimisation(tourToOptimise);
                 sw.Stop();
-                return sw.Elapsed.Milliseconds;
+                return sw.Elapsed.TotalMilliseconds;
             }).Result;
 
             return new MeasurementItem { Method = displayMethodName, TimeElapsed = executionTime, ResultTour = resultTour };
@@ -259,6 +261,11 @@ namespace DPM_TSP
             mng.Items.Clear();
             FillResultsTable(mng);
             FillCommonResults();
+        }
+
+        private void btnSaveStat_Click(object sender, EventArgs e)
+        {
+            DataLoader.SaveMeasurementsInXml(mng.Items, "../../Files/StatisticDb.xml");
         }
     }
 }

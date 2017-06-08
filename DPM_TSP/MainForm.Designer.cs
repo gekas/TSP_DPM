@@ -69,9 +69,10 @@
             this.cError = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvResults = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbxLogging = new System.Windows.Forms.CheckBox();
             this.rtbExecutionSteps = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbxLogging = new System.Windows.Forms.CheckBox();
+            this.btnSaveStat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.crtNN)).BeginInit();
             this.tcMCharts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.crtResult)).BeginInit();
@@ -363,6 +364,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSaveStat);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.dgvCommonResults);
             this.groupBox1.Controls.Add(this.dgvResults);
@@ -465,6 +467,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Логування";
             // 
+            // cbxLogging
+            // 
+            this.cbxLogging.AutoSize = true;
+            this.cbxLogging.Location = new System.Drawing.Point(14, 31);
+            this.cbxLogging.Name = "cbxLogging";
+            this.cbxLogging.Size = new System.Drawing.Size(73, 17);
+            this.cbxLogging.TabIndex = 22;
+            this.cbxLogging.Text = "Логувати";
+            this.cbxLogging.UseVisualStyleBackColor = true;
+            // 
             // rtbExecutionSteps
             // 
             this.rtbExecutionSteps.Location = new System.Drawing.Point(14, 62);
@@ -483,15 +495,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Навігація";
             // 
-            // cbxLogging
+            // btnSaveStat
             // 
-            this.cbxLogging.AutoSize = true;
-            this.cbxLogging.Location = new System.Drawing.Point(14, 31);
-            this.cbxLogging.Name = "cbxLogging";
-            this.cbxLogging.Size = new System.Drawing.Size(73, 17);
-            this.cbxLogging.TabIndex = 22;
-            this.cbxLogging.Text = "Логувати";
-            this.cbxLogging.UseVisualStyleBackColor = true;
+            this.btnSaveStat.Location = new System.Drawing.Point(94, 31);
+            this.btnSaveStat.Name = "btnSaveStat";
+            this.btnSaveStat.Size = new System.Drawing.Size(137, 23);
+            this.btnSaveStat.TabIndex = 23;
+            this.btnSaveStat.Text = "Зберегти статистику";
+            this.btnSaveStat.UseVisualStyleBackColor = true;
+            this.btnSaveStat.Click += new System.EventHandler(this.btnSaveStat_Click);
             // 
             // MainForm
             // 
@@ -568,6 +580,7 @@
         private System.Windows.Forms.RichTextBox rtbExecutionSteps;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox cbxLogging;
+        private System.Windows.Forms.Button btnSaveStat;
     }
 }
 

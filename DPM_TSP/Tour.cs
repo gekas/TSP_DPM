@@ -14,6 +14,12 @@ namespace DPM_TSP
 
         public int Size { get { return Path.Count; } }
 
+        /// <summary>
+        /// Parameterless ctor for serialization.
+        /// </summary>
+        public Tour()
+        { }
+
         public Tour(List<City> cities)
         {
             Path = cities;
