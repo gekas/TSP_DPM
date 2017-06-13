@@ -2,7 +2,7 @@
 
 namespace DPM_TSP.Algos
 {
-    public class NN : ConstructiveMethod
+    public class NearNeighborhood : ConstructiveMethod
     {
         public override Tour GetTour(List<City> cities)
         {

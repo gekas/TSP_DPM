@@ -23,9 +23,9 @@ namespace DPM_TSP.Utils
             return deserializedTour;
         }
 
-        public static void SaveMeasurementsInXml(List<MeasurementItem> objGraph, string fileName)
+        public static void SaveMeasurementsInXml(List<MeasurementItem> measurements, string fileName)
         {
-            var newXmlDoc = SerializeToXmlDocument(objGraph);
+            var newXmlDoc = SerializeToXmlDocument(measurements);
 
             XmlDocument originalDoc = new XmlDocument();
             using (XmlReader xr = new XmlTextReader(fileName))

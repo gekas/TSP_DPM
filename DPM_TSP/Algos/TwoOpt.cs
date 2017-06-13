@@ -1,6 +1,6 @@
 ﻿namespace DPM_TSP.Algos
 {
-    class TwoOpt : OptimisationMethod
+    public class TwoOpt : OptimisationMethod
     {
         public override Tour DoOptimisation(Tour tour)
         {
@@ -46,7 +46,7 @@
             return newTour;
         }
 
-        public static double GainFrom2Opt(City X1, City X2, City Y1, City Y2)
+        protected double GainFrom2Opt(City X1, City X2, City Y1, City Y2)
         {
             double del_length = X1.CostTo(X2) + Y1.CostTo(Y2);
             double add_length = X1.CostTo(Y1) + X2.CostTo(Y2);
@@ -54,7 +54,7 @@
             return del_length - add_length;
         }
 
-        public static void Make2OptMove(Tour tour, int i, int j)
+        protected void Make2OptMove(Tour tour, int i, int j)
         {
             ReverseSegment(tour, (i + 1) % tour.Size, j);
         }

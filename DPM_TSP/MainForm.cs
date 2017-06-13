@@ -201,7 +201,7 @@ namespace DPM_TSP
                 var selectedFile = openFileDialog.FileName;
                 var deserializedTour = DataLoader.GetDataFromFile(selectedFile);
 
-                var nn = new NN();
+                var nn = new NearNeighborhood();
                 nnTour = nn.GetTour(deserializedTour.Path);
                 nnTour.TSPName = deserializedTour.TSPName;
                 nnTour.BestKnownSolution = deserializedTour.BestKnownSolution;
