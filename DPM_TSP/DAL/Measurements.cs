@@ -13,6 +13,8 @@ namespace DPM_TSP
     [Serializable]
     public class MeasurementItem : ICloneable
     {
+        private double loss;
+
         [DisplayName("Метод оптимізації")]
         public string Method { get; set; }
 

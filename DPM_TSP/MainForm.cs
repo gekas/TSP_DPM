@@ -153,6 +153,9 @@ namespace DPM_TSP
         {
             dgvResults.DataSource = null;
             dgvResults.DataSource = new BindingList<MeasurementItem>(mng.Items);
+
+            dgvResults.Columns["Loss"].DefaultCellStyle.Format = "#.###";
+            dgvResults.Columns["TimeElapsed"].DefaultCellStyle.Format = "#.###";
         }
 
         private void ClearCharts()
@@ -240,8 +243,8 @@ namespace DPM_TSP
                 dgvCommonResults.Rows[rowTwoOptIdx].Cells["сMCount"].Value = methodMeasurementsCount;
                 dgvCommonResults.Rows[rowTwoOptIdx].Cells["cMin"].Value = mng.Items.Where(i => i.Method == methodName).Min(i => i.TimeElapsed);
                 dgvCommonResults.Rows[rowTwoOptIdx].Cells["cAvg"].Value = mng.Items.Where(i => i.Method == methodName).Average(i => i.TimeElapsed).ToString("0.#");
-                dgvCommonResults.Rows[rowTwoOptIdx].Cells["cMax"].Value = mng.Items.Where(i => i.Method == methodName).Max(i => i.TimeElapsed);
-                dgvCommonResults.Rows[rowTwoOptIdx].Cells["cError"].Value = mng.Items.Where(i => i.Method == methodName).LastOrDefault()?.Loss + "%";
+                dgvCommonResults.Rows[rowTwoOptIdx].Cells["cMax"].Value = mng.Items.Where(i => i.Method == methodName).Max(i => i.TimeElapsed).ToString("0.###");
+                dgvCommonResults.Rows[rowTwoOptIdx].Cells["cError"].Value = mng.Items.Where(i => i.Method == methodName).LastOrDefault()?.Loss.ToString("0.###");
             }
         }
 
@@ -273,15 +276,45 @@ namespace DPM_TSP
 
         private void tcMainMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tcMainMenu.SelectedTab == tbSpeedStat)
+            if (tcMainMenu.SelectedTab == tbStat)
             {
                 var statisticMeasurements = DataLoader.LoadFromStatisticDb(Resources.StatisticDbFile);
                 FillSpeedStatChart(statisticMeasurements);
-            }
-            else if (tcMainMenu.SelectedTab == tbQualityStat)
-            {
-                var statisticMeasurements = DataLoader.LoadFromStatisticDb(Resources.StatisticDbFile);
                 FillQualityStatChart(statisticMeasurements);
+                FillStatisticGrid(statisticMeasurements);
+            }
+        }
+
+        private void FillStatisticGrid(List<MeasurementItem> measurements)
+        {
+            var groupsByProblem = measurements.GroupBy(m => m.TSPProblem).ToList();
+
+            int counter = 0;
+            foreach(var groupProblem in groupsByProblem){
+                var groupsByMethod = measurements.GroupBy(m => m.Method).ToList();
+
+                foreach(var groupMethod in groupsByMethod)
+                {
+                    counter++;
+                    var chunkToGetAvg = measurements.Where(m => m.TSPProblem == groupProblem.Key && m.Method == groupMethod.Key).ToList();
+
+                    double avgDist = chunkToGetAvg.Average(m => m.Distance);
+                    double avgTimeElapsed = chunkToGetAvg.Average(m => m.TimeElapsed);
+                    double avgLoss = chunkToGetAvg.Average(m => m.Loss);
+
+                    int newRowId = dgvStatResults.Rows.Add();
+                    dgvStatResults.Rows[newRowId].Cells["cRowIndex"].Value = counter;
+                    dgvStatResults.Rows[newRowId].Cells["cMethodName"].Value = chunkToGetAvg.First().Method;
+                    dgvStatResults.Rows[newRowId].Cells["cTspProblem"].Value = chunkToGetAvg.First().TSPProblem;
+                    dgvStatResults.Rows[newRowId].Cells["cProblemSize"].Value = chunkToGetAvg.First().Size;
+                    dgvStatResults.Rows[newRowId].Cells["cBestKnownSolution"].Value = chunkToGetAvg.First().BestKnownSolution;
+                    dgvStatResults.Rows[newRowId].Cells["cAvgDistance"].Value = avgDist;
+                    dgvStatResults.Rows[newRowId].Cells["cAvgTimeElapsed"].Value = avgTimeElapsed;
+                    dgvStatResults.Rows[newRowId].Cells["cAvgLoss"].Value = avgLoss;
+                }
+
+                int newRowIdx = dgvStatResults.Rows.Add();
+                dgvStatResults.Rows[newRowIdx].DefaultCellStyle.BackColor = Color.Green;
             }
         }
 

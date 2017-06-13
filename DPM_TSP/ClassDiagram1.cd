@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DPM_TSP.Algos.ConstructiveMethod">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Algos\ConstructiveMethod.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DPM_TSP.Algos.NearNeighborhood">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Algos\NN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.Algos.OptimisationMethod">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAAA=</HashCode>
+      <FileName>Algos\OptimisationMethod.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DPM_TSP.Algos.OrOpt" Collapsed="true">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAQAAAAA=</HashCode>
+      <FileName>Algos\OrOpt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.Algos.ThreeOpt" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="DPM_TSP.Algos.ThreeOpt.OptCase" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Algos\ThreeOpt.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAIAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Algos\ThreeOpt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.Algos.TwoHalfOpt" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAA=</HashCode>
+      <FileName>Algos\TwoHalfOpt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.Algos.TwoOpt" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAgAAABAAAAAAAA=</HashCode>
+      <FileName>Algos\TwoOpt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.City" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAABYAA=</HashCode>
+      <FileName>DAL\City.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.ExecutionProcess" Collapsed="true">
+    <Position X="10.25" Y="3.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="DPM_TSP.ExecutionProcess.StepType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\ExecutionProcess.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Class Name="DPM_TSP.ExecutionProcess.ExecutionStep" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\ExecutionProcess.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAACAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>DAL\ExecutionProcess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.MeasurementManager" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Measurements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.MeasurementItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEcIIAEkAAAAAAgAAAgAAAAAIBAAAAAAAAAABA=</HashCode>
+      <FileName>DAL\Measurements.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DPM_TSP.MeasurementItemBySizeComparer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>DAL\Measurements.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DPM_TSP.Tour" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAgAAAEgAIIiAAAAAAAAAAAAAAAAAAAAQAAABA=</HashCode>
+      <FileName>DAL\Tour.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DPM_TSP.MainForm" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BGALIUIKAaIEEVRUAWCha+QrAAAKIQgAACQRoWMABCk=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.Program" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.Resources" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.Extensions.RichTextBoxExtensions" Collapsed="true">
+    <Position X="13" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\Extensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.Properties.Resources" Collapsed="true">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.Properties.Settings" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPM_TSP.Utils.DataLoader">
+    <Position X="10.25" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAgAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Utils\DataLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DPM_TSP.Algos.ITSPSolver" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Algos\ITSPSolver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="DPM_TSP.OptMethods" Collapsed="true">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAQAAAAAAAAAAAAACAAE=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
