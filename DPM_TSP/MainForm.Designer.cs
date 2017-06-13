@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea22 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea23 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea24 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea21 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.dgvResults = new System.Windows.Forms.DataGridView();
             this.btnClear = new System.Windows.Forms.Button();
@@ -94,6 +94,12 @@
             this.cAvgDistance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cAvgTimeElapsed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cAvgLoss = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAvgQuality = new System.Windows.Forms.DataGridView();
+            this.cHeader = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTwoOpt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTHOpt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cThreeOpt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cOrOpt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommonResults)).BeginInit();
@@ -112,6 +118,7 @@
             this.tcMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartAlgosQuality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatResults)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAvgQuality)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog
@@ -451,6 +458,7 @@
             // 
             // tbStat
             // 
+            this.tbStat.Controls.Add(this.dgvAvgQuality);
             this.tbStat.Controls.Add(this.dgvStatResults);
             this.tbStat.Controls.Add(this.chartAlgosQuality);
             this.tbStat.Controls.Add(this.chartAlgosSpeed);
@@ -464,17 +472,17 @@
             // 
             // chartAlgosSpeed
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartAlgosSpeed.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartAlgosSpeed.Legends.Add(legend2);
+            chartArea22.Name = "ChartArea1";
+            this.chartAlgosSpeed.ChartAreas.Add(chartArea22);
+            legend12.Name = "Legend1";
+            this.chartAlgosSpeed.Legends.Add(legend12);
             this.chartAlgosSpeed.Location = new System.Drawing.Point(23, 3);
             this.chartAlgosSpeed.Name = "chartAlgosSpeed";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "sAlgosSpeed";
-            this.chartAlgosSpeed.Series.Add(series2);
+            series22.ChartArea = "ChartArea1";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series22.Legend = "Legend1";
+            series22.Name = "sAlgosSpeed";
+            this.chartAlgosSpeed.Series.Add(series22);
             this.chartAlgosSpeed.Size = new System.Drawing.Size(1013, 452);
             this.chartAlgosSpeed.TabIndex = 0;
             this.chartAlgosSpeed.Text = "chart1";
@@ -510,15 +518,15 @@
             this.crtNN.BackColor = System.Drawing.Color.Silver;
             this.crtNN.BorderlineColor = System.Drawing.Color.Gray;
             this.crtNN.BorderSkin.BorderColor = System.Drawing.Color.Gray;
-            chartArea3.Name = "ChartArea1";
-            this.crtNN.ChartAreas.Add(chartArea3);
+            chartArea23.Name = "ChartArea1";
+            this.crtNN.ChartAreas.Add(chartArea23);
             this.crtNN.Location = new System.Drawing.Point(12, 38);
             this.crtNN.Name = "crtNN";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.EmptyPointStyle.BorderWidth = 5;
-            series3.Name = "NN";
-            this.crtNN.Series.Add(series3);
+            series23.ChartArea = "ChartArea1";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series23.EmptyPointStyle.BorderWidth = 5;
+            series23.Name = "NN";
+            this.crtNN.Series.Add(series23);
             this.crtNN.Size = new System.Drawing.Size(749, 654);
             this.crtNN.TabIndex = 6;
             this.crtNN.Text = "crtNN";
@@ -578,13 +586,13 @@
             // crtResult
             // 
             this.crtResult.BackColor = System.Drawing.Color.Silver;
-            chartArea4.Name = "ChartArea1";
-            this.crtResult.ChartAreas.Add(chartArea4);
+            chartArea24.Name = "ChartArea1";
+            this.crtResult.ChartAreas.Add(chartArea24);
             this.crtResult.Location = new System.Drawing.Point(767, 38);
             this.crtResult.Name = "crtResult";
-            series4.ChartArea = "ChartArea1";
-            series4.Name = "Series1";
-            this.crtResult.Series.Add(series4);
+            series24.ChartArea = "ChartArea1";
+            series24.Name = "Series1";
+            this.crtResult.Series.Add(series24);
             this.crtResult.Size = new System.Drawing.Size(862, 654);
             this.crtResult.TabIndex = 8;
             this.crtResult.Text = "crtSolution";
@@ -603,16 +611,16 @@
             // 
             // chartAlgosQuality
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartAlgosQuality.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartAlgosQuality.Legends.Add(legend1);
+            chartArea21.Name = "ChartArea1";
+            this.chartAlgosQuality.ChartAreas.Add(chartArea21);
+            legend11.Name = "Legend1";
+            this.chartAlgosQuality.Legends.Add(legend11);
             this.chartAlgosQuality.Location = new System.Drawing.Point(23, 474);
             this.chartAlgosQuality.Name = "chartAlgosQuality";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartAlgosQuality.Series.Add(series1);
+            series21.ChartArea = "ChartArea1";
+            series21.Legend = "Legend1";
+            series21.Name = "Series1";
+            this.chartAlgosQuality.Series.Add(series21);
             this.chartAlgosQuality.Size = new System.Drawing.Size(1013, 457);
             this.chartAlgosQuality.TabIndex = 1;
             this.chartAlgosQuality.Text = "chart1";
@@ -631,13 +639,12 @@
             this.cAvgDistance,
             this.cAvgTimeElapsed,
             this.cAvgLoss});
-            this.dgvStatResults.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvStatResults.Location = new System.Drawing.Point(1042, 3);
+            this.dgvStatResults.Location = new System.Drawing.Point(1042, 74);
             this.dgvStatResults.Name = "dgvStatResults";
             this.dgvStatResults.ReadOnly = true;
             this.dgvStatResults.RowHeadersVisible = false;
             this.dgvStatResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStatResults.Size = new System.Drawing.Size(867, 979);
+            this.dgvStatResults.Size = new System.Drawing.Size(862, 911);
             this.dgvStatResults.TabIndex = 2;
             // 
             // cRowIndex
@@ -690,6 +697,49 @@
             this.cAvgLoss.Name = "cAvgLoss";
             this.cAvgLoss.ReadOnly = true;
             // 
+            // dgvAvgQuality
+            // 
+            this.dgvAvgQuality.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAvgQuality.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvAvgQuality.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAvgQuality.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cHeader,
+            this.cTwoOpt,
+            this.cTHOpt,
+            this.cThreeOpt,
+            this.cOrOpt});
+            this.dgvAvgQuality.Location = new System.Drawing.Point(1042, 6);
+            this.dgvAvgQuality.Name = "dgvAvgQuality";
+            this.dgvAvgQuality.RowHeadersVisible = false;
+            this.dgvAvgQuality.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvAvgQuality.Size = new System.Drawing.Size(862, 46);
+            this.dgvAvgQuality.TabIndex = 3;
+            // 
+            // cHeader
+            // 
+            this.cHeader.HeaderText = "";
+            this.cHeader.Name = "cHeader";
+            // 
+            // cTwoOpt
+            // 
+            this.cTwoOpt.HeaderText = "2-Opt";
+            this.cTwoOpt.Name = "cTwoOpt";
+            // 
+            // cTHOpt
+            // 
+            this.cTHOpt.HeaderText = "2.5-Opt";
+            this.cTHOpt.Name = "cTHOpt";
+            // 
+            // cThreeOpt
+            // 
+            this.cThreeOpt.HeaderText = "3-Opt";
+            this.cThreeOpt.Name = "cThreeOpt";
+            // 
+            // cOrOpt
+            // 
+            this.cOrOpt.HeaderText = "Or-Opt";
+            this.cOrOpt.Name = "cOrOpt";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -721,6 +771,7 @@
             this.tcMainMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartAlgosQuality)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatResults)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAvgQuality)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -782,6 +833,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cAvgDistance;
         private System.Windows.Forms.DataGridViewTextBoxColumn cAvgTimeElapsed;
         private System.Windows.Forms.DataGridViewTextBoxColumn cAvgLoss;
+        private System.Windows.Forms.DataGridView dgvAvgQuality;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cHeader;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cTwoOpt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cTHOpt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cThreeOpt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cOrOpt;
     }
 }
 

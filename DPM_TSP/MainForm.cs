@@ -281,13 +281,16 @@ namespace DPM_TSP
                 var statisticMeasurements = DataLoader.LoadFromStatisticDb(Resources.StatisticDbFile);
                 FillSpeedStatChart(statisticMeasurements);
                 FillQualityStatChart(statisticMeasurements);
-                FillStatisticGrid(statisticMeasurements);
+                FillStatisticGrids(statisticMeasurements);
             }
         }
 
-        private void FillStatisticGrid(List<MeasurementItem> measurements)
+        private void FillStatisticGrids(List<MeasurementItem> measurements)
         {
             var groupsByProblem = measurements.GroupBy(m => m.TSPProblem).ToList();
+
+            var mainRowId = dgvStatResults.Rows.Add();
+            dgvAvgQuality.Rows[mainRowId].Cells["cHeader"].Value = "Середня похибка (%)";
 
             int counter = 0;
             foreach(var groupProblem in groupsByProblem){
@@ -295,6 +298,16 @@ namespace DPM_TSP
 
                 foreach(var groupMethod in groupsByMethod)
                 {
+                    // Fill top grid
+
+                    string columnName;
+                    if (groupMethod.Key.ToLower() == "2-opt") columnName = "cTwoOpt";
+                    else if (groupMethod.Key.ToLower() == "2.5-opt") columnName = "cTHOpt";
+                    else if (groupMethod.Key.ToLower() == "3-opt") columnName = "cThreeOpt";
+                    else columnName = "cOrOpt";
+                    dgvAvgQuality.Rows[mainRowId].Cells[columnName].Value = measurements.Where(m => m.Method == groupMethod.Key).ToList().Average(m => m.Loss).ToString("0.###");
+
+                    // Fill below grid
                     counter++;
                     var chunkToGetAvg = measurements.Where(m => m.TSPProblem == groupProblem.Key && m.Method == groupMethod.Key).ToList();
 
